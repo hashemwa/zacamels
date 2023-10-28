@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="zakah.css">
+    <title>Zakah Calculator for Camels</title>
+    <meta name="viewport" content="width=device-width, initial-scale=4.0">
+    <link rel="icon" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
+</head>
+<body style="background-color: hsl(190, 4%, 73%)">
+    <div id="box">
+    <div id="titlebox"><img src="camel.png" id="pic"><h1 id="title">Zakah Calculator</h1></div>
+    <h2 id="subtitle">Camels:</h2>
+    <input type="number" max="1600" id="numCamels" class="no-spin" required>
+    <br>
+    <button type="button" id="button" onclick="calculateZakah()">Calculate</button>
+    <br>
+    <br>
+    <h2 id="subtitle2">Zakah:</h2>
+    <div id="zakahdiv">
+    <strong><p id="zakahResult"></p></strong>
+    </div>
+    </div>
+    <script src="zakah.js"></script>
+</body>
+</html>
+
+
+
+
