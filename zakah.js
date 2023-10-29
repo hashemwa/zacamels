@@ -716,12 +716,32 @@ function calculateZakahAmount(numCamels) {
 const input = document.getElementById("numCamels");
 
 input.addEventListener("input", function() {
-  if (this.value > 1600) {
+    if (this.value > 1600) {
     this.value = 1600;
-  }
-  if (this.value < 0) {
+    }
+    if (this.value < 0) {
     this.value = 0;
-  }
+    }
 });
 
+numCamels.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+          button.click();
+    }
+});
+let arrowRotated = false;
 
+function toggleArrowAndKey() {
+    const arrow = document.querySelector('#arrow');
+    const key = document.getElementById('key');
+    arrow.classList.toggle('collapsed');
+    if (arrowRotated) {
+        arrow.style.transform = 'rotate(0deg)';
+        arrowRotated = false;
+        key.style.transform = 'translateY(-240px)';
+      } else {
+        arrow.style.transform = 'rotate(180deg)';
+        arrowRotated = true;
+        key.style.transform = 'translateY(15px)';
+      }
+  }

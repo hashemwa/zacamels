@@ -1,282 +1,366 @@
 
 @media screen and (max-width: 3000px) {
-#button {
-  font-size: 20px;
-  font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
-  padding: 15px;
-  border: 2px;
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(280, 41%, 66%);
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.5s ease
-}
-
-
-#button:hover {
-  font-size: 20px;
-  border: 2px;
-  font-weight: bold;
-  padding: 15px;
-  color: hsl(280, 41%, 66%);
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#titlebox {
-  text-align: center;
-  font-family: 'Courier New', Courier, monospace;
-  background-color: hsl(0, 0%, 100%);
-  width: auto;
-  height: 150px;
-  color: #000;
-  padding: 10px;
-  border-radius: 10px;
+  #button {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 15px;
+    border: 2px;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(264, 59%, 75%);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease
   }
-
-#box {
-  text-align: center;
-  background-color: hsla(172, 72%, 76%, 0.829);
-  max-width: 100%;
-  height: 90%;
-  box-sizing: border-box;
-  padding-bottom: 20%;
-  color: #000;
-  border-radius: 10px;
-  box-shadow: 0px 50px 20px -30px rgba(0,0,0,0.45);
+  
+  #button:hover {
+    font-size: 20px;
+    border: 2px;
+    font-weight: bold;
+    padding: 15px;
+    color: hsl(264, 59%, 75%);
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    cursor: pointer;
   }
+  
+  #titlebox {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: hsl(0, 0%, 100%);
+    width: auto;
+    height: 150px;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    }
+  
+  #box {
+    text-align: center;
+    background-color: hsl(172, 46%, 75%);
+    max-width: 100%;
+    height: 605px;
+    box-sizing: border-box;
+    padding-bottom: 20%;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0px 50px 20px -50px rgba(0,0,0,0.45);
+    position: initial;
+    z-index: 1;
+    }
 
-#numCamels {
-  font-size: 20px;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-  padding: 20px;
-  background-color: hsla(0, 0%, 100%, 0.877);
-  border: 1px solid hsl(0, 0%, 100%);
-  border-radius: 10px;
-  margin-bottom: 10px;
-  margin-top: -10px;
-  width: 100px;
-  text-align: center;
-}
-
-#title {
-  color:rgb(0, 0, 0);
-  font-weight: 9000;
-}
-
-#subtitle {
-  color:rgb(0, 0, 0);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 27px;
-}
-#subtitle2 {
-  color:rgb(0, 0, 0);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 27px;
-}
-
-#pic {
-  height: 50px;
-  width: 50px;
-  margin-top: 20px;
-  margin-bottom: -20px;
-}
-
-#zakahResult {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 18.3px;
-  color:#000;
-  padding-top: 30px;
-  border-radius: 10px;
-  width: auto;
-  height: 70px;
-  text-align: center;
-  opacity: 1;
-}
-
-#zakahdiv {
-  padding-bottom: 10px;
-  background-color: hsla(0, 0%, 100%, 0.637);
-  border-radius: 10px;
-  margin-bottom: -40px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: -10px;
-  width: auto;
-  height: 70px;
-  text-align: center;
-  opacity: 1;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+  #key {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    background-color: hsl(0, 0%, 100%);
+    width: auto;
+    color: #000;
+    padding: 20px;
+    margin-top: -35px;
+    border-radius: 10px;
+    display: block;
+    transform: translateY(-240px);
+    transition: transform 0.5s ease;
+    z-index: -1;
+    position: relative;
+    box-shadow: 0px 50px 20px -50px rgba(0,0,0,0.45);
+    }
+  
+  #atext {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding-bottom: 7px;
+    padding-top: 55px;
+    }
+  
+  #arrow {
+      width: 0;
+      height: 0;
+      rotate: 180deg;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 15px solid hsl(264, 59%, 75%);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      }
+  
+  #arrow.collapsed {
+      transform: rotate(0deg);
+      transition: transform 0.3s ease;
+      }
+  
+  #numCamels {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding: 20px;
+    background-color: hsla(0, 0%, 100%, 0.877);
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    width: 100px;
+    text-align: center;
   }
-  to {
+  
+  #title {
+    color:rgb(0, 0, 0);
+  }
+  
+  #subtitle {
+    color:rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 27px;
+  }
+  #subtitle2 {
+    color:rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 27px;
+  }
+  
+  #pic {
+    height: 50px;
+    width: 50px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+  }
+  
+  #zakahResult {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18.3px;
+    color:#000;
+    padding-top: 30px;
+    border-radius: 10px;
+    width: auto;
+    height: 70px;
+    text-align: center;
     opacity: 1;
   }
-}
-
-.fade-in {
-  animation: fadeIn 1s ease;
-}
-
-input.no-spin::-webkit-inner-spin-button,
-input.no-spin::-webkit-outer-spin-button {
--webkit-appearance: none;
-appearance: none;
-margin: 0;
-}
-}
-@media screen and (min-width: 992px) {
-#button {
-  font-size: 25px;
-  font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border: 2px;
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(280, 41%, 66%);
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.5s ease
- }
   
-  
-#button:hover {
-  font-size: 25px;
-  border: 2px;
-  font-weight: bold;
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: hsl(280, 41%, 66%);
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#titlebox {
-  text-align: center;
-  font-family: 'Courier New', Courier, monospace;
-  background-color: hsl(0, 0%, 100%);
-  width: auto;
-  color: #000;
-  margin-top: -150px;
-  padding: 50px;
-  border-radius: 10px;
-  }
-
-#box {
-  text-align: center;
-  background-color: hsla(172, 72%, 76%, 0.829);
-  width: 700px;
-  height: 650px;
-  color: #000;
-  border-radius: 10px;
-  box-shadow: 0px 50px 20px -30px rgba(0,0,0,0.45);
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 200px;
-  margin-bottom: 200px;
-  padding-top: 20px;
-  }
-
-#numCamels {
-  font-size: 30px;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-  padding-left: 50px;
-  padding-right: 50px;
-  background-color: hsla(0, 0%, 100%, 0.877);
-  border: 1px solid hsl(0, 0%, 100%);
-  border-radius: 10px;
-  margin-bottom: 10px;
-  margin-top: -20px;
-  width: 100px;
-  text-align: center;
-}
-
-#title {
-  color:rgb(0, 0, 0);
-  font-weight: 9000;
-  font-size: 50px;
-}
-
-#subtitle {
-  color:rgb(0, 0, 0);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 40px;
-}
-#subtitle2 {
-  color:rgb(0, 0, 0);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 40px;
-}
-
-#pic {
-  height: 100px;
-  width: 100px;
-  margin-top: -20px;
-  margin-bottom: -25px;
-}
-
-#zakahResult {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 30px;
-  color:#000;
-  padding-bottom: 10px;
-  padding-top: 20px;
-  border-radius: 10px;
-  width: auto;
-  height: 50px;
-  text-align: center;
-  opacity: 1;
-}
-
-body {
-  overflow: hidden
-}
-
-#zakahdiv {
-  padding-top: 10px;
-  padding-bottom: 40px;
-  background-color: hsla(0, 0%, 100%, 0.637);
-  border-radius: 10px;
-  margin-bottom: 10px;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: -20px;
-  width: auto;
-  height: 100px;
-  text-align: center;
-  opacity: 1;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
+  #zakahdiv {
+    padding-bottom: 10px;
+    background-color: hsla(0, 0%, 100%, 0.637);
+    border-radius: 10px;
+    margin-bottom: -40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -10px;
+    width: auto;
+    height: 70px;
+    text-align: center;
     opacity: 1;
   }
-}
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease;
+  }
+  
+  input.no-spin::-webkit-inner-spin-button,
+  input.no-spin::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  }
+  }
+  
+  @media screen and (min-width: 992px) {
+  #button {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 2px;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(264, 59%, 75%);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease
+   }
+    
+  #button:hover {
+    font-size: 25px;
+    border: 2px;
+    font-weight: bold;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: hsl(264, 59%, 75%);
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #titlebox {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: hsl(0, 0%, 100%);
+    width: auto;
+    color: #000;
+    margin-top: -150px;
+    padding: 50px;
+    border-radius: 10px;
+    }
 
-.fade-in {
-  animation: fadeIn 1s ease;
-}
+  #key {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 50px 20px -50px rgba(0,0,0,0.45);
+    width: auto;
+    color: #000;
+    border-radius: 10px;
+    margin-top: -30px;
+    display: block;
+    transform: translateY(-240px);
+    transition: transform 0.5s ease;
+    z-index: -1;
+    position: relative;
+    }
+    
+  #box {
+    text-align: center;
+    background-color: hsl(172, 46%, 75%);
+    width: 700px;
+    height: 703px;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0px 50px 20px -50px rgba(0,0,0,0.45);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    padding-top: 20px;
+    position: initial;
+    z-index: 1;
+    }
 
-input.no-spin::-webkit-inner-spin-button,
-input.no-spin::-webkit-outer-spin-button {
--webkit-appearance: none;
-appearance: none;
-margin: 0;
-}
-}
+  #atext {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding-bottom: 7px;
+    padding-top: 10px;
+    }
 
+  #arrow {
+    width: 0;
+    height: 0;
+    rotate: 180deg;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid hsl(264, 59%, 75%);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    }
 
+  #arrow.collapsed {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    }
+    
+  #numCamels {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding-left: 60px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: hsla(0, 0%, 100%, 0.877);
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: -20px;
+    width: 100px;
+    text-align: center;
+  }
+  
+  #title {
+    color:rgb(0, 0, 0);
+    font-size: 50px;
+  }
+  
+  #subtitle {
+    color:rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+  }
+
+  #subtitle2 {
+    color:rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+  }
+  
+  #pic {
+    height: 100px;
+    width: 100px;
+    margin-top: -20px;
+    margin-bottom: -25px;
+  }
+  
+  #zakahResult {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color:#000;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    border-radius: 10px;
+    width: auto;
+    height: 50px;
+    text-align: center;
+    opacity: 1;
+  }
+  
+  #zakahdiv {
+    padding-top: 10px;
+    padding-bottom: 40px;
+    background-color: hsla(0, 0%, 100%, 0.637);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: -20px;
+    width: auto;
+    height: 100px;
+    text-align: center;
+    opacity: 1;
+    z-index: 1;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease;
+  }
+  
+  input.no-spin::-webkit-inner-spin-button,
+  input.no-spin::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  }
+  }
+  
+  
