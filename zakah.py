@@ -11,7 +11,7 @@ def calc(num_ibil):
     level = None
 
     if num_ibil < 5:
-        result = "nothing"
+        result = "Nothing"
     # -- -- -- -- -- -- -- -- -- -- -- -- -- --  
     elif num_ibil >= 5 and num_ibil <= 24:
         result = str(num_ibil // 5) + " Sheep/Goats"
