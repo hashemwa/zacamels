@@ -31,10 +31,10 @@ function calculateZakah() {
 
     if (numCamels < 30) {
       zakahResult = "Nothing";
-    } else if (numCamels >= 30 && numCamels <= 39) {
-      zakahResult = "1 Tabī'/Tabī'ah";
     } else if (numCamels >= 40 && numCamels <= 59) {
       zakahResult = "1 Musinn/Musinnah";
+    } else if (numCamels >= 30 && numCamels <= 39) {
+      zakahResult = "1 Tabī'/Tabī'ah";
     } else if (numCamels >= 60 && numCamels <= 69) {
       zakahResult = "2 Tabī's/Tabī'ahs";
     } else if (numCamels >= 70 && numCamels <= 79) {
@@ -45,10 +45,35 @@ function calculateZakah() {
       zakahResult = "3 Tabī's";
     } else if (numCamels >= 100 && numCamels <= 109) {
       zakahResult = "2 Tabī'ahs + 1 Musinnah";
-    } else if (numCamels >= 110) {
-      const tabis = Math.floor((numCamels - 40) / 30);
-      const musinnahs = Math.floor((numCamels - 30 * tabis) / 40);
-      zakahResult = `${tabis} Tabi's/Tabi'ahs + ${musinnahs} Musinnahs`;
+    } else if (numCamels % 120 === 0) {
+      const musinnahCount = numCamels / 40;
+      const tabiCount = numCamels / 30;
+      zakahResult = musinnahCount + " Musinnahs/" + tabiCount + " Tabīs";
+    } else if (numCamels % 40 === 0) {
+      const musinnahCount = numCamels / 40;
+      zakahResult = musinnahCount + " Musinnahs";
+    } else if (numCamels % 30 === 0) {
+      const tabiCount = numCamels / 30;
+      zakahResult = tabiCount + " Tabīs";
+    } else {
+      // For numbers outside the specific conditions
+      let remainingCamels = numCamels;
+      let musinnahCount = 0;
+      let tabiCount = 0;
+
+      while (remainingCamels >= 40) {
+        remainingCamels -= 40;
+        musinnahCount++;
+      }
+
+      while (remainingCamels >= 30) {
+        remainingCamels -= 30;
+        tabiCount++;
+      }
+
+      if (remainingCamels === 0) {
+        zakahResult = musinnahCount + " Musinnahs and " + tabiCount + " Tabīs";
+      }
     }
 
     return zakahResult;
