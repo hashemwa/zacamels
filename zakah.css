@@ -1,18 +1,17 @@
-
 @media screen and (max-width: 3000px) {
   #button {
     font-size: 20px;
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     padding: 15px;
     border: 2px;
     color: hsl(0, 0%, 100%);
     background-color: hsl(264, 59%, 75%);
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.5s ease
+    transition: background-color 0.5s ease;
   }
-  
+
   #button:hover {
     font-size: 20px;
     border: 2px;
@@ -23,18 +22,18 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  
+
   #titlebox {
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     background-color: hsl(0, 0%, 100%);
     width: auto;
     height: 150px;
     color: #000;
     padding: 10px;
     border-radius: 10px;
-    }
-  
+  }
+
   #box {
     text-align: center;
     background-color: hsl(172, 46%, 75%);
@@ -44,14 +43,14 @@
     padding-bottom: 20%;
     color: #000;
     border-radius: 10px;
-    box-shadow: 0px 50px 20px -50px rgba(0,0,0,0.45);
+    box-shadow: 0px 50px 20px -50px rgba(0, 0, 0, 0.45);
     position: initial;
     z-index: 1;
-    }
+  }
 
   #key {
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 12px;
     background-color: hsl(0, 0%, 100%);
     width: auto;
@@ -60,40 +59,40 @@
     margin-top: -35px;
     border-radius: 10px;
     display: block;
-    transform: translateY(-350px);
+    transform: translateY(-450px);
     transition: transform 0.5s ease;
     z-index: -1;
     position: relative;
-    box-shadow: 0px 50px 20px -50px rgba(0,0,0,0.45);
-    }
-  
+    box-shadow: 0px 50px 20px -50px rgba(0, 0, 0, 0.45);
+  }
+
   #atext {
     font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-weight: bold;
     padding-bottom: 7px;
     padding-top: 55px;
-    }
-  
+  }
+
   #arrow {
-      width: 0;
-      height: 0;
-      rotate: 180deg;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-bottom: 15px solid hsl(264, 59%, 75%);
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      }
-  
+    width: 0;
+    height: 0;
+    rotate: 180deg;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid hsl(264, 59%, 75%);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
   #arrow.collapsed {
-      transform: rotate(0deg);
-      transition: transform 0.3s ease;
-      }
-  
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+
   #numCamels {
     font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-weight: bold;
     padding: 20px;
     background-color: hsla(0, 0%, 100%, 0.877);
@@ -105,38 +104,38 @@
     text-align: center;
     transition: width 0.2s;
   }
-  
+
   #title {
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
   }
-  
+
   #subtitle {
-    color:rgb(0, 0, 0);
-    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 0, 0);
+    font-family: "Courier New", Courier, monospace;
     font-size: 27px;
   }
   #subtitle2 {
-    color:rgb(0, 0, 0);
-    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 0, 0);
+    font-family: "Courier New", Courier, monospace;
     font-size: 27px;
   }
-  
+
   #pic {
     height: 50px;
     width: 50px;
     margin-top: 20px;
     margin-bottom: -20px;
   }
-  
+
   #solid {
-    border-top: 10px;
-    border-color:#000;
+    border: 2px solid;
+    border-color: #000;
   }
-  
+
   #zakahResult {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 15px;
-    color:#000;
+    color: #000;
     padding-top: 30px;
     border-radius: 10px;
     width: auto;
@@ -144,7 +143,7 @@
     text-align: center;
     opacity: 1;
   }
-  
+
   #zakahdiv {
     padding-bottom: 10px;
     background-color: hsla(0, 0%, 100%, 0.637);
@@ -166,24 +165,218 @@
       opacity: 1;
     }
   }
-  
+
   .fade-in {
     animation: fadeIn 1s ease;
   }
-  
+
   input.no-spin::-webkit-inner-spin-button,
   input.no-spin::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
   }
+}
+
+#menu {
+  position: relative;
+  padding: 30px;
+  width: 40px;
+  height: 40px;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("camel.png") hsl(172, 46%, 75%);
+  border-radius: 20%;
+  align-items: center;
+  cursor: pointer;
+  &.open {
+    #button1,
+    #cowpng,
+    #button2 {
+      opacity: 1;
+      pointer-events: auto;
+      &:first-of-type {
+        right: 120px;
+      }
+      &:not(:first-of-type):not(:last-of-type) {
+        right: -120px;
+      }
+      &:last-of-type {
+        right: -120px;
+      }
+    }
   }
-  
-  @media screen and (min-width: 992px) {
+}
+
+#menu2 {
+  position: relative;
+  padding: 30px;
+  width: 40px;
+  height: 40px;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("cow.png") hsl(172, 46%, 75%);
+  border-radius: 20%;
+  align-items: center;
+  cursor: pointer;
+  &.open {
+    #button3,
+    #camelpng,
+    #button4 {
+      opacity: 1;
+      pointer-events: auto;
+      &:first-of-type {
+        right: 120px;
+      }
+      &:not(:first-of-type):not(:last-of-type) {
+        right: -120px;
+      }
+      &:last-of-type {
+        right: -120px;
+      }
+    }
+  }
+}
+
+#menu3 {
+  position: relative;
+  padding: 30px;
+  width: 40px;
+  height: 40px;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("sheep.png") hsl(172, 46%, 75%);
+  border-radius: 20%;
+  align-items: center;
+  cursor: pointer;
+  &.open {
+    #button5,
+    #camelpng,
+    #button6 {
+      opacity: 1;
+      pointer-events: auto;
+      &:first-of-type {
+        right: 120px;
+      }
+      &:not(:first-of-type):not(:last-of-type) {
+        right: -120px;
+      }
+      &:last-of-type {
+        right: -120px;
+      }
+    }
+  }
+}
+
+#button1 {
+  border-radius: 20%;
+  cursor: pointer;
+  background: url("cow.png") no-repeat 50%/70% hsl(172, 46%, 75%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity,
+    0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+#button2 {
+  padding: 50px;
+  border-radius: 20%;
+  cursor: pointer;
+  background: url("sheep.png") no-repeat 50%/70% hsl(172, 46%, 75%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity,
+    0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+#button3 {
+  border-radius: 20%;
+  padding: 30px;
+  cursor: pointer;
+  background: url("camel.png") no-repeat 50%/70% hsl(172, 46%, 75%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity,
+    0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+#button4 {
+  border-radius: 20%;
+  padding: 30px;
+  cursor: pointer;
+  background: url("sheep.png") no-repeat 50%/70% hsl(172, 46%, 75%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity,
+    0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+#button5 {
+  border-radius: 20%;
+  padding: 30px;
+  cursor: pointer;
+  background: url("camel.png") no-repeat 50%/70% hsl(172, 46%, 75%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity,
+    0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+#button6 {
+  border-radius: 20%;
+  padding: 30px;
+  cursor: pointer;
+  background: url("cow.png") no-repeat 50%/70% hsl(172, 46%, 75%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity,
+    0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (min-width: 992px) {
   #button {
     font-size: 25px;
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     padding-right: 30px;
     padding-left: 30px;
     padding-top: 20px;
@@ -193,9 +386,9 @@
     background-color: hsl(264, 59%, 75%);
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.5s ease
-   }
-    
+    transition: background-color 0.5s ease;
+  }
+
   #button:hover {
     font-size: 25px;
     border: 2px;
@@ -209,35 +402,35 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  
+
   #titlebox {
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     background-color: hsl(0, 0%, 100%);
     width: auto;
     color: #000;
     margin-top: -150px;
     padding: 50px;
     border-radius: 10px;
-    }
+  }
 
   #key {
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 20px;
     background-color: hsl(0, 0%, 100%);
-    box-shadow: 0px 50px 20px -50px rgba(0,0,0,0.45);
+    box-shadow: 0px 50px 20px -50px rgba(0, 0, 0, 0.45);
     width: auto;
     color: #000;
     border-radius: 10px;
     margin-top: -30px;
     display: block;
-    transform: translateY(-350px);
+    transform: translateY(-450px);
     transition: transform 0.5s ease;
     z-index: -1;
     position: relative;
-    }
-    
+  }
+
   #box {
     text-align: center;
     background-color: hsl(172, 46%, 75%);
@@ -245,7 +438,7 @@
     height: 703px;
     color: #000;
     border-radius: 10px;
-    box-shadow: 0px 50px 20px -50px rgba(0,0,0,0.45);
+    box-shadow: 0px 50px 20px -50px rgba(0, 0, 0, 0.45);
     margin-left: auto;
     margin-right: auto;
     margin-top: 200px;
@@ -253,15 +446,15 @@
     padding-top: 20px;
     position: initial;
     z-index: 1;
-    }
+  }
 
   #atext {
     font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-weight: bold;
     padding-bottom: 7px;
     padding-top: 10px;
-    }
+  }
 
   #arrow {
     width: 0;
@@ -272,16 +465,16 @@
     border-bottom: 15px solid hsl(264, 59%, 75%);
     cursor: pointer;
     transition: transform 0.3s ease;
-    }
+  }
 
   #arrow.collapsed {
     transform: rotate(0deg);
     transition: transform 0.3s ease;
-    }
-    
+  }
+
   #numCamels {
     font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-weight: bold;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -294,24 +487,24 @@
     text-align: center;
     transition: width 0.2s;
   }
-  
+
   #title {
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     font-size: 50px;
   }
-  
+
   #subtitle {
-    color:rgb(0, 0, 0);
-    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 0, 0);
+    font-family: "Courier New", Courier, monospace;
     font-size: 40px;
   }
 
   #subtitle2 {
-    color:rgb(0, 0, 0);
-    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 0, 0);
+    font-family: "Courier New", Courier, monospace;
     font-size: 40px;
   }
-  
+
   #pic {
     height: 100px;
     width: 100px;
@@ -320,14 +513,14 @@
   }
 
   #solid {
-    border-top: 10px;
-    border-color:#000;
+    border: 2px solid;
+    border-color: #000;
   }
-  
+
   #zakahResult {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 30px;
-    color:#000;
+    color: #000;
     padding-bottom: 10px;
     padding-top: 20px;
     border-radius: 10px;
@@ -336,7 +529,7 @@
     text-align: center;
     opacity: 1;
   }
-  
+
   #zakahdiv {
     padding-top: 10px;
     padding-bottom: 40px;
@@ -352,6 +545,11 @@
     opacity: 1;
     z-index: 1;
   }
+
+  #nav {
+    position: relative;
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -360,17 +558,198 @@
       opacity: 1;
     }
   }
-  
+
   .fade-in {
     animation: fadeIn 1s ease;
   }
-  
+
   input.no-spin::-webkit-inner-spin-button,
   input.no-spin::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
   }
+}
+
+#menu {
+  position: relative;
+  padding: 30px;
+  width: 40px;
+  height: 40px;
+  background: url("camel.png") no-repeat 50%/70% hsl(172, 46%, 75%);
+  border-radius: 20%;
+  align-items: center;
+  cursor: pointer;
+  &.open {
+    #button1,
+    #cowpng #button2 {
+      opacity: 1;
+      pointer-events: auto;
+      &:first-of-type {
+        right: 120px;
+      }
+      &:not(:first-of-type):not(:last-of-type) {
+        right: -120px;
+      }
+      &:last-of-type {
+        right: 120px;
+      }
+    }
   }
-  
-  
+}
+
+#menu2 {
+  position: relative;
+  padding: 30px;
+  width: 40px;
+  height: 40px;
+  background: url("cow.png") no-repeat 50%/70% hsl(172, 46%, 75%);
+  border-radius: 20%;
+  align-items: center;
+  cursor: pointer;
+  &.open {
+    #button3,
+    #camelpng #button4 {
+      opacity: 1;
+      pointer-events: auto;
+      &:first-of-type {
+        right: 120px;
+      }
+      &:not(:first-of-type):not(:last-of-type) {
+        right: -120px;
+      }
+      &:last-of-type {
+        right: 120px;
+      }
+    }
+  }
+}
+
+#menu3 {
+  position: relative;
+  padding: 30px;
+  width: 40px;
+  height: 40px;
+  background: url("sheep.png") no-repeat 50%/70% hsl(172, 46%, 75%);
+  border-radius: 20%;
+  align-items: center;
+  cursor: pointer;
+  &.open {
+    #button5,
+    #camelpng #button6 {
+      opacity: 1;
+      pointer-events: auto;
+      &:first-of-type {
+        right: 120px;
+      }
+      &:not(:first-of-type):not(:last-of-type) {
+        right: -120px;
+      }
+      &:last-of-type {
+        right: 120px;
+      }
+    }
+  }
+}
+
+#button1 {
+  border-radius: 20%;
+  padding: 30px;
+  cursor: pointer;
+  background: url("cow.png") no-repeat 50%/70% hsl(172, 46%, 75%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity,
+    0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+#button2 {
+  border-radius: 20%;
+  padding: 30px;
+  cursor: pointer;
+  background: url("sheep.png") no-repeat 50%/70% hsl(172, 46%, 75%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity,
+    0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+#button3 {
+  border-radius: 20%;
+  padding: 30px;
+  cursor: pointer;
+  background: url("camel.png") no-repeat 50%/70% hsl(172, 46%, 75%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity,
+    0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+#button4 {
+  border-radius: 20%;
+  padding: 30px;
+  cursor: pointer;
+  background: url("sheep.png") no-repeat 50%/70% hsl(172, 46%, 75%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity,
+    0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+#button5 {
+  border-radius: 20%;
+  padding: 30px;
+  cursor: pointer;
+  background: url("camel.png") no-repeat 50%/70% hsl(172, 46%, 75%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity,
+    0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+#button6 {
+  border-radius: 20%;
+  padding: 30px;
+  cursor: pointer;
+  background: url("cow.png") no-repeat 50%/70% hsl(172, 46%, 75%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity,
+    0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
+  &:hover {
+    transform: scale(1.1);
+  }
+}

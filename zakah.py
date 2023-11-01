@@ -98,5 +98,3 @@ try:
     print_zakat(num_camels)
 except ValueError:
     print("Invalid input. Please enter a valid number of camels.")
-
-# Credit goes to Wasif Pervez

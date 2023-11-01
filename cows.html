@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="zakah.css" />
+    <title>Zakah Calculator for Cows</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.png" />
+    <link rel="shortcut icon" href="favicon.png" />
+  </head>
+  <body style="background-color: hsl(190, 4%, 73%)">
+    <div id="box">
+      <div id="titlebox">
+        <div id="menu2" onclick="this.classList.toggle('open')" title="Cows">
+          <a id="camelpng" href="camels.html">
+            <div id="button3" title="Camels">
+              <img
+                src="camel.png"
+                style="width: 40px; height: 35px; visibility: hidden"
+              />
+            </div>
+          </a>
+          <a id="sheeppng" href="sheep.html">
+            <div id="button4" title="Ovines">
+              <img
+                src="sheep.png"
+                style="width: 40px; height: 35px; visibility: hidden"
+              />
+            </div>
+          </a>
+        </div>
+        <h1 id="title">Zakah Calculator</h1>
+      </div>
+      <h2 id="subtitle">Cows:</h2>
+      <input
+        type="text"
+        id="numCamels"
+        pattern="[0-9]*"
+        oninput="this.value = this.value.replace(/[^0-9]/, '')"
+        class="no-spin"
+        required
+      />
+      <br />
+      <button type="button" id="button" onclick="calculateZakah()">
+        Calculate
+      </button>
+      <br />
+      <br />
+      <h2 id="subtitle2">Zakah:</h2>
+      <div id="zakahdiv">
+        <strong><p id="zakahResult"></p></strong>
+      </div>
+      <div id="atext">Note</div>
+      <center><div id="arrow" onclick="toggleArrowAndKey()"></div></center>
+      <br />
+      <br />
+      <div id="key">
+        <strong><p>Tabī': An almost 2-year-old male calf</p></strong>
+        <strong><p>Tabī'ah: An almost 2-year-old female calf</p></strong>
+        <strong><p>Musinn: An almost 3-year-old male calf</p></strong>
+        <strong><p>Musinnah: An almost 3-year-old female calf</p></strong>
+        <hr id="solid" />
+        <strong><p>In zakah, cows and oxes are the same</p></strong>
+        <hr id="solid" />
+        <strong
+          ><p>
+            If you do not have enough bovines, then give the equivalent monetary
+            value in zakah
+          </p></strong
+        >
+      </div>
+      <br />
+      <br />
+    </div>
+    <script src="cows.js"></script>
+  </body>
+</html>
