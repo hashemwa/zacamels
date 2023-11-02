@@ -26,9 +26,12 @@ function calculateZakah() {
     paragraph.classList.add("fade-in");
   }, 0);
 
+  function formatNumberWithCommas(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
   function calculateZakahAmount(numCamels) {
     let zakahResult = "N/A";
-
+    numCamels = Math.floor(numCamels / 10) * 10;
     if (numCamels < 30) {
       zakahResult = "Nothing";
     } else if (numCamels >= 40 && numCamels <= 59) {
@@ -48,34 +51,35 @@ function calculateZakah() {
     } else if (numCamels % 120 === 0) {
       const musinnahCount = numCamels / 40;
       const tabiCount = numCamels / 30;
-      zakahResult = musinnahCount + " Musinnahs/" + tabiCount + " Tabīs";
+      zakahResult = tabiCount + " Tabī's/" + musinnahCount + " Musinnahs";
     } else if (numCamels % 40 === 0) {
       const musinnahCount = numCamels / 40;
       zakahResult = musinnahCount + " Musinnahs";
     } else if (numCamels % 30 === 0) {
       const tabiCount = numCamels / 30;
-      zakahResult = tabiCount + " Tabīs";
+      zakahResult = tabiCount + " Tabī's";
     } else {
-      // For numbers outside the specific conditions
-      let remainingCamels = numCamels;
-      let musinnahCount = 0;
+      // Handle numbers not divisible by 30 or 40
       let tabiCount = 0;
-
-      while (remainingCamels >= 40) {
-        remainingCamels -= 40;
-        musinnahCount++;
+      let musinnahCount = 0;
+      while (numCamels % 40 !== 0) {
+        numCamels -= 30;
+        tabiCount += 1;
       }
 
-      while (remainingCamels >= 30) {
-        remainingCamels -= 30;
-        tabiCount++;
-      }
+      musinnahCount = Math.floor(numCamels / 40);
 
-      if (remainingCamels === 0) {
-        zakahResult = musinnahCount + " Musinnahs and " + tabiCount + " Tabīs";
-      }
+      zakahResult = tabiCount + " Tabī's + " + musinnahCount + " Musinnahs";
     }
-
+    if (zakahResult.match(/\b1 Tabī's\b/)) {
+      zakahResult = zakahResult.replace(/\b1 Tabī's\b/, "1 Tabī'");
+    }
+    if (zakahResult.match(/\b1 Musinnahs\b/)) {
+      zakahResult = zakahResult.replace(/\b1 Musinnahs\b/, "1 Musinnah");
+    }
+    if (numCamels >= 1000) {
+      zakahResult = formatNumberWithCommas(zakahResult);
+    }
     return zakahResult;
   }
 }
