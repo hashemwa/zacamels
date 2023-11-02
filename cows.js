@@ -115,7 +115,7 @@ numCamelsInput.addEventListener("input", function () {
   const characters = inputValue.length;
   const minWidth = 70;
 
-  const newWidth = minWidth + characters * 11;
+  const newWidth = minWidth + characters * 10;
 
   this.style.width = newWidth + "px";
 });
@@ -135,8 +135,8 @@ input.addEventListener("input", function () {
   if (this.value < 10000000) {
     zakahResult.textContent = "";
   }
-  if (this.value > 1000000000) {
-    this.value = 1000000000;
+  if (this.value > 10000000) {
+    this.value = 10000000;
   }
   if (this.value < 0) {
     this.value = 0;

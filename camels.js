@@ -165,8 +165,8 @@ input.addEventListener("input", function () {
   if (this.value < 1000000) {
     zakahResult.textContent = "";
   }
-  if (this.value > 50000000) {
-    this.value = 50000000;
+  if (this.value > 1000000) {
+    this.value = 1000000;
   }
   if (this.value < 0) {
     this.value = 0;
