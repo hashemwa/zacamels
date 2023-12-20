@@ -43,11 +43,11 @@ function calculateZakah() {
     } else if (numCamels >= 70 && numCamels <= 79) {
       zakahResult = "1 Musinnah + 1 Tabī";
     } else if (numCamels >= 80 && numCamels <= 89) {
-      zakahResult = "2 Musinnahs";
+      zakahResult = "2 Musinns";
     } else if (numCamels >= 90 && numCamels <= 99) {
-      zakahResult = "3 Tabī's";
+      zakahResult = "3 Tabī'ahs";
     } else if (numCamels >= 100 && numCamels <= 109) {
-      zakahResult = "2 Tabī'ahs + 1 Musinnah";
+      zakahResult = "2 Tabī's + 1 Musinnah";
     } else if (numCamels % 120 === 0) {
       const musinnahCount = numCamels / 40;
       const tabiCount = numCamels / 30;
